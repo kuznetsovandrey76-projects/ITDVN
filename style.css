@@ -1,3 +1,13 @@
 fieldset {
 	margin: 10px;
 }
+.login {
+	background-color: lightblue;
+}
+textarea {
+	resize: none;
+}
+/*label {
+	width: 250px;
+	background-color: khaki;
+}*/

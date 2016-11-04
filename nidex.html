@@ -6,15 +6,18 @@
 	<link rel="stylesheet" href="style.css">	
 </head>
 <body>
-	<form action="kuznetsovandrey76.github.io" method="post">
+	<form 
+	action="kuznetsovandrey76.github.io"
+	method="post" target="_blank">
 		
-	<fieldset>
+	<fieldset class="login">
 		<legend>Login</legend>
 		<!-- text -->
-		<label for="name-field">Name:</label><br>
-		<input type="text" name="name" id="name-field" placeholder="Your name" autofocus><br>
+		<label for="name-field" accesskey="n">Name:</label><br>
+		<input type="text" name="name" id="name-field" placeholder="Your name" size="50" autofocus><br>
+		<input type="text" name="about" id="" maxlength="25"> <br>
 		<!-- password -->
-		<label for="password-field">Password:</label><br>
+		<label for="password-field" accesskey="p">Password:</label><br>
 		<input type="password" name="password" id="password-field" disabled><br>
 		<!-- email -->
 		<label for="email-field">Email:</label><br>
@@ -46,28 +49,49 @@
 		multiple - дает право выбрать несколько пунктов зажимая cntr
 		 -->
 
-		<select name="day" multiple size="3">
-		  <option value="monday">Пн</option>
-		  <option value="friday" selected>Пт</option>
-		  <option value="sunday">Вс</option>
+		
+
+		<select name="day" multiple size="9">
+			<optgroup label="day">
+			    <option value="monday">Пн</option>
+			    <option value="friday" selected>Пт</option>
+			    <option value="sunday">Вс</option>
+		    </optgroup>
+		    <optgroup label="month">
+			    <option value="january">Jan</option>
+			    <option value="feb" selected>Feb</option>
+			    <option value="march">Mar</option>
+		    </optgroup>
 		</select><br><br>
 		
 		<label for="your-text">Your message:</label><br>
-		<textarea name="text" id="your-text" rows="5" placeholder="Your comment"></textarea><br>
-
+		<textarea name="text" id="your-text" rows="5" cols="50" placeholder="rows='5' cols='50'" readonly></textarea><br>
+	<pre>
+	textarea:
+	rows - высота
+	cols - ширина
+	</pre>
 		<input type="checkbox" id="checked-programmer-field" checked>
 		<label for="checked-programmer-field">Are you programmer</label><br>
 		
 	</fieldset>		
+		<!-- <input type="number" name="" id="" min="1" max="31" required> -->
+		<input type="hidden" name="card" value="visa">
 
-		<input type="submit" value="Send" 
-		<!-- onclick="alert('Hello, world!') -->
-		">
-		<input type="reset" value="reset"><br><br>
-
-		<input type="number" name="" id="" min="1" max="31" required>
 		<input type="week" name="" id="">
 
+		<input type="submit" name="submit" value="Send" 
+		">
+		<!-- onclick="alert('Hello, world!') -->
+		<input type="reset" name="reset" value="reset"><br><br>
+
+
 	</form>
+
+
+	<p>
+		type="radio" & type="checkbox" / checked <br>
+		select > option / selected
+	</p>
 </body>
 </html>
